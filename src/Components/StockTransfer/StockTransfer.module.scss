@@ -1,0 +1,22 @@
+@import "../../assets/scss/common.scss";
+
+.mainContainer {
+    display: flex;
+    flex: 1;
+
+    .sidebar {
+        padding: 16px;
+    }
+
+    .sideBarleft {
+        border-right: 2px solid $Grey-200;
+    }
+
+    .sideBarRigth {
+        border-left: 2px solid $Grey-200;
+    }
+
+    .main {
+        flex: 1;
+    }
+}
