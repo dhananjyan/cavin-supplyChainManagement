@@ -4,23 +4,44 @@ const Header = lazy(() => import("../Header/Header"));
 
 import cx from "classnames";
 import s from "./style.module.scss";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import SearchBar from "./SearchBar/SearchBar";
-import Dashboard from "../Dashboard/Dashboard";
+import Warehouse from "../Warehouse/Warehouse";
 import StockTransfer from "../StockTransfer/StockTransfer";
 
-
 export default function Home() {
+    const currentTab = useSelector(state => state?.dashboard?.activeTab);
+
+    const getCurrentPage = () => {
+        switch (currentTab) {
+            case "dashboard":
+                return "<Warehouse />";
+                break;
+            case "warehouse":
+                return <Warehouse />;
+                break;
+            case "stockLookup":
+                return <StockTransfer />;
+                break;
+            case "stockTransfer":
+                return <StockTransfer />;
+                break;
+
+            default:
+                break;
+        }
+    }
+
     return (
         <div className={s.main}>
             <Suspense>
                 <Header />
             </Suspense>
             {/* <div className="flex-grow-1"> */}
-
-                {/* <Dashboard /> */}
-                <StockTransfer />
-                {/* <Footer /> */}
+            {getCurrentPage()}
+            {/* <Dashboard /> */}
+            {/* <StockTransfer /> */}
+            {/* <Footer /> */}
             {/* </div> */}
         </div>
     )

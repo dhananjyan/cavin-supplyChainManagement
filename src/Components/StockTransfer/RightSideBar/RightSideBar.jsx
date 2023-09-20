@@ -4,7 +4,7 @@ import s from "./RightSideBar.module.scss"
 import ellipseIcon from "../../../assets/svg/ellipse.svg"
 import avatarIcon from "../../../assets/svg/avatar.svg"
 import { ReactSVG } from "react-svg"
-import { Button } from "react-bootstrap"
+import Button from "../../Common/Button/Button"
 
 export default function RightSideBar() {
     return (

@@ -20,3 +20,7 @@ thead>tr>th.active,
 tfoot>tr>td.active {
     background-color: #ffab63 !important;
 }
+
+body {
+    overflow: hidden;
+}
