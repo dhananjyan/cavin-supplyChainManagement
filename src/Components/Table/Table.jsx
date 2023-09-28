@@ -8,13 +8,13 @@ export default function Table(props) {
                 <thead >
                     <tr>
                         {columns?.map((item, i) => {
-                            return <th key={`TABLE_HEADER_COLUMN_ITEM_${item}_${i}`}>{item}</th>
+                            return <th width={item?.width}  key={`TABLE_HEADER_COLUMN_ITEM_${item?.label}_${i}`}>{item?.label}</th>
                         })}
                     </tr>
                 </thead>
-                <tbody>
-                    {children}
-                </tbody>
+                {/* <tbody> */}
+                {children}
+                {/* </tbody> */}
             </table>
         </div>
     )

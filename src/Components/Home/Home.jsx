@@ -8,6 +8,7 @@ import { useDispatch, useSelector } from "react-redux";
 import SearchBar from "./SearchBar/SearchBar";
 import Warehouse from "../Warehouse/Warehouse";
 import StockTransfer from "../StockTransfer/StockTransfer";
+import StockLookup from "../StockLookup/StockLookup";
 
 export default function Home() {
     const currentTab = useSelector(state => state?.dashboard?.activeTab);
@@ -21,7 +22,7 @@ export default function Home() {
                 return <Warehouse />;
                 break;
             case "stockLookup":
-                return <StockTransfer />;
+                return <StockLookup />;
                 break;
             case "stockTransfer":
                 return <StockTransfer />;

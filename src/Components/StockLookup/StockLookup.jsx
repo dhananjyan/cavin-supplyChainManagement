@@ -1,7 +1,7 @@
 import SearchBar from "../Home/SearchBar/SearchBar";
 import cx from "classnames";
 
-import s from "./Warehouse.module.scss";
+import s from "./StockLookup.module.scss";
 import Table from "../Table/Table";
 import { ReactSVG } from "react-svg";
 
@@ -13,7 +13,7 @@ import rightArrow from "../../assets/svg/rightArrow.svg"
 import SuggestedWarehouse from "../SuggestedWarehouse/SuggestedWarehouse";
 import { useState } from "react";
 
-export default function Warehouse() {
+export default function StockLookup() {
     const [currentActiveRow, setCurrentActiveRow] = useState([]);
 
     const handleAccordionClick = (id) => {
@@ -34,6 +34,9 @@ export default function Warehouse() {
             <SearchBar />
             <div className={cx(s.content)}>
                 <div className={cx("px-5", s.container)}>
+                    <div>
+                        {/* <Sele */}
+                    </div>
                     <div className={s.tableContainer}>
 
                         <Table
